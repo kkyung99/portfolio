@@ -21,7 +21,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open"); //창 닫힘
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navToggleBtn = document.querySelector(".navbar__toggle-btn");
+navToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle contact me button
